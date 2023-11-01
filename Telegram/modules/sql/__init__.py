@@ -6,6 +6,7 @@ from Telegram import DB_URI, ZInit, log
 
 
 def start() -> scoped_session:
+    # TODO: configurar DATABASE_URL
     engine = create_engine(DB_URI, client_encoding="utf8", echo=ZInit.DEBUG)
     log.info("[PostgreSQL] Fetching Database Details......")
     BASE.metadata.bind = engine
